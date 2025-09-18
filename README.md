@@ -1,2 +1,2 @@
-# todo
-The Odin Project - Javascript - To Do List
+# dynamic-ui
+The Odin Project - Dynamic User Interface Interactions
