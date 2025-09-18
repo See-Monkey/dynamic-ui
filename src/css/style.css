@@ -79,11 +79,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .linkContainer {
-  display: flex;   /*======================================*/
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 70px;
   right: 65px;
+}
+
+.linkContainer.active {
+  display: flex;
 }
 
 .link {
@@ -134,10 +138,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
+  }
+
+  .nav.active {
+    display: flex;
   }
 
   .nav .li {
