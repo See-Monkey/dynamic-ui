@@ -37,5 +37,124 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ============ global ============ */
 :root {
-  
+  --black: #222223;
+  --gray: #838386;
+  --silver: #c1c1c0;
+  --white: #fffffa;
+  --d-green: #0d3d42;
+  --green: #0d5c63;
+  --teal: #247b7b;
+  --l-teal: #44a1a0;
+  --blue: #78cdd7;
+  --red: #ae1c2a;
+  --l-red: #c44955;  
+}
+
+/* ============ header ============ */
+.header {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--white);
+  padding: 12px 40px;
+  font-size: 40px;
+  text-wrap: nowrap;
+}
+
+.nav {
+  display: flex;
+}
+
+.li {
+  padding: 8px 20px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkContainer {
+  display: flex;   /*======================================*/
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 65px;
+}
+
+.link {
+  padding: 8px 50px;
+  background-color: var(--gray);
+}
+
+.li a,
+.li p {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.li p:hover {
+  cursor: pointer;
+}
+
+.hamburger {
+  height: 40px;
+  width: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 95%;
+  border-radius: 3px;
+  background-color: var(--white);
+}
+
+@media (max-width: 590px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav .li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .linkContainer {
+    position: static;
+  }
+}
+
+/* ============ content ============ */
+.content {
+
+}
+
+.imgCarousel {
+
 }
