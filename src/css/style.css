@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 70px;
   right: 65px;
+  z-index: 2;
 }
 
 .linkContainer.active {
@@ -160,9 +161,39 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ============ content ============ */
 .content {
-
+  width: 100%;
 }
 
 .imgCarousel {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slides {
+  width: 100%;
+}
+
+.slide {
+  position: relative;;
+  width: 100%;
+  display: none;
+}
+
+.slide.activeSlide {
+  display: block;
+}
+
+.imgCarousel button {
+
+}
+
+#prevBtn {
+
+}
+
+#nextBtn {
 
 }
