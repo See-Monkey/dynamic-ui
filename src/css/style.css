@@ -51,11 +51,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============ header ============ */
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
 .header {
   background-color: var(--black);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 7%;
+  z-index: 2;
 }
 
 .logo {
@@ -67,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav {
   display: flex;
+  z-index: 2;
 }
 
 .li {
@@ -84,7 +92,6 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 70px;
   right: 65px;
-  z-index: 2;
 }
 
 .linkContainer.active {
@@ -93,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .link {
   padding: 8px 50px;
-  background-color: var(--gray);
+  background-color: #838386dd;
 }
 
 .li a,
@@ -143,6 +150,8 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     width: 100%;
     text-align: center;
+    z-index: 2;
+    background-color: #222223bb
   }
 
   .nav.active {
@@ -152,6 +161,11 @@ h1, h2, h3, h4, h5, h6 {
   .nav .li {
     display: flex;
     flex-direction: column;
+    z-index: 2;
+  }
+
+  .link {
+    background-color: #83838655;
   }
 
   .linkContainer {
@@ -162,10 +176,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ============ content ============ */
 .content {
   width: 100%;
+  height: 93%;
+  z-index: 1;
 }
 
 .imgCarousel {
   width: 100%;
+  height: 100%;
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -174,12 +191,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .slides {
   width: 100%;
+  height: 100%;
 }
 
 .slide {
   position: relative;;
   width: 100%;
+  height: 100%;
   display: none;
+  object-fit: cover;
 }
 
 .slide.activeSlide {
@@ -187,13 +207,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .imgCarousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: #22222388;
+  color: var(--silver);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+}
 
+.imgCarousel button:hover,
+.imgCarousel button:active {
+  background-color: #222223dd;
+  color: var(--white);
+  border: 1px solid var(--black);
 }
 
 #prevBtn {
-
+  left: 1rem;
 }
 
 #nextBtn {
-
+  right: 1rem;
 }
