@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic UI</title>
+<script defer src="main.js"></script></head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Big Logo</h1>
+            <div class="nav">
+                <div class="li">
+                    <a href="#">Home</a>
+                </div>
+                <div class="li links">
+                    <div id="linksBtn"><p>Links</p></div>
+                    <div class="linkContainer">
+                        <div class="link"><a href="#">Link 1</a></div>
+                        <div class="link"><a href="#">Link 2</a></div>
+                        <div class="link"><a href="#">Link 3</a></div>
+                    </div>
+                </div>
+                <div class="li">
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburgerBtn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="imgCarousel">
+                <div class="slides">
+                    <img src="338fe7b1fa970cf72ad4.jpg" alt="decrepit building and 3 flying robots" class="slide">
+                    <img src="688313766cc7107e4d1f.jpg" alt="geometric sculptures in the wilderness" class="slide">
+                    <img src="6c69b7a0250c3cb9ef34.jpg" alt="person in protective gear in the forest" class="slide">
+                    <img src="7bc336d96f22477f1d9c.jpg" alt="futuristic neon city" class="slide">
+                </div>
+                <button id="prevBtn">&#10094</button>
+                <button id="nextBtn">&#10095</button>
+                <div class="dots"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
