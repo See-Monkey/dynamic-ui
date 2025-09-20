@@ -185,7 +185,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   position: relative;
   margin: auto;
-  overflow: hidden;
   z-index: 1;
 }
 
@@ -231,4 +230,26 @@ h1, h2, h3, h4, h5, h6 {
 
 #nextBtn {
   right: 1rem;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 6px;
+  background-color: #838386aa;
+
+}
+
+.activeDot {
+  background-color: var(--white);
 }

@@ -20,10 +20,17 @@ hamburgerBtn.addEventListener("click", function() {
 // ========== image carousel ========== //
 
 const slides = document.querySelectorAll(".slide");
+const dots = document.querySelector(".dots");
 const prevBtn = document.querySelector("#prevBtn");
 const nextBtn = document.querySelector("#nextBtn");
 let slideIndex = 0;
 let intervalID = null;
+
+slides.forEach(() => {
+    const dot = document.createElement("div");
+    dot.classList.add("dot");
+    dots.appendChild(dot);
+});
 
 function showSlide(index) {
     if (index >= slides.length) {
@@ -31,11 +38,17 @@ function showSlide(index) {
     } else if (index < 0) {
         slideIndex = slides.length - 1;
     }
+
+    const dotList = document.querySelectorAll(".dot");
     
     slides.forEach(slide => {
         slide.classList.remove("activeSlide");
     });
     slides[slideIndex].classList.add("activeSlide");
+    dotList.forEach(dot => {
+        dot.classList.remove("activeDot");
+    });
+    dotList[slideIndex].classList.add("activeDot");
     intervalID = setInterval(nextSlide, 5000)
 }
 
